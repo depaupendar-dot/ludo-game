@@ -1,14 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Ludo Game</title>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ludo Game</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <h1>My Ludo Game</h1>
+    <div class="game-wrapper">
 
-    <p>My first game!</p>
+        <header class="game-header">
+
+            <div>
+
+                <h1>🎲 Ludo</h1>
+
+                <p>
+                    Classic four-player Ludo game
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <main class="game-area">
+
+            <!-- =====================================
+                 LUDO BOARD
+            ====================================== -->
+
+            <section class="board-section">
+
+                <div
+                    id="board"
+                    class="board"
+                >
+
+                    <!--
+                        JavaScript creates all
+                        15 × 15 board cells.
+
+                        IMPORTANT:
+                        Do NOT put tokens here.
+                    -->
+
+
+                    <!-- RED HOME -->
+
+                    <div
+                        class="player-home red-home"
+                    >
+
+                        <div class="home-box">
+
+                            <div class="home-title">
+                                RED
+                            </div>
+
+                            <div class="home-token-area"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GREEN HOME -->
+
+                    <div
+                        class="player-home green-home"
+                    >
+
+                        <div class="home-box">
+
+                            <div class="home-title">
+                                GREEN
+                            </div>
+
+                            <div class="home-token-area"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- YELLOW HOME -->
+
+                    <div
+                        class="player-home yellow-home"
+                    >
+
+                        <div class="home-box">
+
+                            <div class="home-title">
+                                YELLOW
+                            </div>
+
+                            <div class="home-token-area"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BLUE HOME -->
+
+                    <div
+                        class="player-home blue-home"
+                    >
+
+                        <div class="home-box">
+
+                            <div class="home-title">
+                                BLUE
+                            </div>
+
+                            <div class="home-token-area"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CENTER FINISH -->
+
+                    <div class="center-finish">
+
+                        <div class="finish-title">
+                            🏆
+                        </div>
+
+                        <div class="finish-token-area"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 GAME CONTROLS
+            ====================================== -->
+
+            <aside class="game-panel">
+
+                <div class="turn-card">
+
+                    <div class="small-label">
+                        CURRENT TURN
+                    </div>
+
+                    <div
+                        id="turnText"
+                        class="turn-text"
+                    >
+                        🔴 Red Player's Turn
+                    </div>
+
+                </div>
+
+
+                <div class="dice-card">
+
+                    <div
+                        id="dice"
+                        class="dice"
+                    >
+                        ⚀
+                    </div>
+
+                    <button
+                        id="rollButton"
+                        class="roll-button"
+                    >
+                        🎲 Roll Dice
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="result"
+                    class="result"
+                >
+                    Roll the dice to start.
+                </div>
+
+
+                <button
+                    id="resetButton"
+                    class="reset-button"
+                >
+                    🔄 New Game
+                </button>
+
+
+                <div class="rules-card">
+
+                    <h2>How to Play</h2>
+
+                    <ul>
+
+                        <li>
+                            Roll <strong>6</strong> to
+                            bring a token onto the board.
+                        </li>
+
+                        <li>
+                            Move according to the
+                            dice number.
+                        </li>
+
+                        <li>
+                            Rolling <strong>6</strong>
+                            gives another turn.
+                        </li>
+
+                        <li>
+                            Three consecutive 6s
+                            lose the turn.
+                        </li>
+
+                        <li>
+                            ⭐ Safe squares cannot
+                            be captured.
+                        </li>
+
+                        <li>
+                            Capture opponents by
+                            landing on them.
+                        </li>
+
+                        <li>
+                            Reach the center with
+                            an exact roll.
+                        </li>
+
+                        <li>
+                            First player with all
+                            4 tokens finished wins.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
